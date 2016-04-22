@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="php-terminal-gameboy-emulator" default="build">
+<project name="php-terminal-gameboy-emulator" default="rpm">
     <property name="vendordir" value="${basedir}/bin" />
     <target name="check" depends="lint,phpcs"/>
 
@@ -21,4 +21,16 @@
             <arg path="${basedir}/src" />
         </exec>
     </target>
+
+    <target name="rpm" description="Compile single binary rpm by spec file">
+            <rpm
+                    specFile="gb.spec"
+                    topDir="${basedir}/build/"
+                    cleanBuildDir="false"
+                    removeSpec="false"
+                    removeSource="false"
+                    command = "-bb"
+                    failOnError="true"
+            />
+
 </project>
