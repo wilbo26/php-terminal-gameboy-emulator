@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="php-terminal-gameboy-emulator" default="rpm">
+    <property environment="env" />
     <property name="vendordir" value="${basedir}/bin" />
     <target name="check" depends="lint,phpcs"/>
 
