@@ -30,7 +30,7 @@
                     cleanBuildDir="false"
                     removeSpec="false"
                     removeSource="false"
-                    command = '--define="branch ${env.GIT_TAG_MESSAGE}" --define="release $env.BUILD_NUMBER}" -bb'
+                    command = '--define="release $env.BUILD_NUMBER}" -bb'
                     failOnError="true"
             />
      </target>
